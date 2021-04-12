@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Ex cars typescript</title>
+    <script src="../models/car.js"></script>
+    <script src="../models/wheel.js"></script>
+    <script src="../controllers/controller.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <form id="carFormId" name="carForm">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="plate">Matrícula</label><br>
+                    <input type="text" id="plateId" name="plate" class="form-control"><br>
+                    <div class="invalid-feedback" id="errorPlate"></div>
+                    <label for="brand">Marca</label><br>
+                    <input type="text" id="brandId" name="brand" class="form-control"><br>
+                    <div class="invalid-feedback" id="errorBrand"></div>
+                    <label for="color">Color</label><br>
+                    <input type="text" id="colorId" name="color" class="form-control"><br>
+                    <div class="invalid-feedback" id="errorColor"></div>
+                </div>
+            </div>
+            <button type="button" onclick="createCar()" id="carButton" class="btn btn-primary mb-2">Create car</button>
+        </form>
+        <form id="wheelFormId" name="wheelForm" style="display: none;">
+            <div class="form-inline">
+                <div class="form-group col-md-3 m-1">
+                    <label for="brandWheel1">Marca Rueda 1</label>
+                    <input type="text" id="brandWheel1Id" name="brandWheel1" class="form-control brandWheel"><br>
+                    <div class="invalid-feedback errorBrandClass" id="errorBrand1">hola</div>
+                </div>
+                <div class="form-group col-md-4 m-1">
+                    <label for="diameter1">Diámetro Rueda 1</label>
+                    <input type="text" id="diameter1Id" name="diameter1" class="form-control diameterWheel"><br>
+                    <div class="invalid-feedback" id="errorDiameter1"></div>
+                </div>
+            <div class="form-inline">
+                <div class="form-group col-md-4 m-1">
+                    <label for="brandWheel2">Marca Rueda 2</label>
+                    <input type="text" id="brandWheel2Id" name="brandWheel2" class="form-control brandWheel"><br>
+                    <div class="invalid-feedback errorBrandClass" id="errorBrand2"></div>
+                </div>
+                <div class="form-group col-md-4 m-1">
+                    <label for="diameter2">Diámetro Rueda 2</label>
+                    <input type="text" id="diameter2Id" name="diameter2" class="form-control diameterWheel"><br>
+                    <div class="invalid-feedback" id="errorDiameter2"></div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group col-md-4 m-1">
+                    <label for="brandWheel3">Marca Rueda 3</label>
+                    <input type="text" id="brandWheel3Id" name="brandWheel3" class="form-control brandWheel"><br>
+                    <div class="invalid-feedback errorBrandClass" id="errorBrand3"></div>
+                </div>
+                <div class="form-group col-md-4 m-1">
+                    <label for="diameter3">Diámetro Rueda 3</label>
+                    <input type="text" id="diameter3Id" name="diameter3" class="form-control diameterWheel"><br>
+                    <div class="invalid-feedback" id="errorDiameter3"></div>
+                </div>
+            </div>
+            <div class="form-inline">
+                <div class="form-group col-md-4 m-1">     
+                    <label for="brandWheel4">Marca Rueda 4</label>
+                    <input type="text" id="brandWheel4Id" name="brandWheel4" class="form-control brandWheel"><br>
+                    <div class="invalid-feedback errorBrandClass" id="errorBrand4"></div>
+                </div>
+                <div class="form-group col-md-4 m-1">
+                    <label for="diameter4">Diámetro Rueda 4</label>
+                    <input type="text" id="diameter4Id" name="diameter4" class="form-control diameterWheel"><br>
+                    <div class="invalid-feedback" id="errorDiameter4"></div>
+                </div>
+            </div>
+            <button type="button" onclick="addWheels()" id="wheelButton" class="btn btn-primary mb-2 m-3">Añadir Ruedas</button>
+        </form>
+        <div>
+            <p id="carInfo"></p>
+            <p id="wheelsInfo"></p>
+            <p id="listCars"></p>
+        </div>
+    </div>
+</body>
+</html>
