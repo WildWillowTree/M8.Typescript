@@ -63,7 +63,7 @@ function addWheels(){
 
         }
     }
-    for (let i=0; i < brandWheel.length; i++){
+    for (let i=0; i < diameterWheel.length; i++){
         if(diameterWheel[i].value == "" ) {
             diameterWheel[i].classList.add("is-invalid");
             validDiameter = false;

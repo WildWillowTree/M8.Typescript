@@ -59,7 +59,7 @@ function addWheels() {
             validBrand = true;
         }
     }
-    for (var i = 0; i < brandWheel.length; i++) {
+    for (var i = 0; i < diameterWheel.length; i++) {
         if (diameterWheel[i].value == "") {
             diameterWheel[i].classList.add("is-invalid");
             validDiameter = false;
