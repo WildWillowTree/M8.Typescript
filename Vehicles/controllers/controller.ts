@@ -45,7 +45,7 @@ function validatePlate(newPlate:string) {
 function addWheels(){
     let brandWheel = document.getElementsByClassName('brandWheel') as HTMLCollectionOf<HTMLInputElement>;
     let diameterWheel = document.getElementsByClassName('diameterWheel') as HTMLCollectionOf<HTMLInputElement>;
-    let validBrand = false, validDiameter = false, contador = 0;
+    let contador = 0;
     let wheel:Wheel;
     let wheelsInfo = document.getElementById("wheelsInfo") as HTMLElement;
     let listCars = document.getElementById("listCars") as HTMLElement;
@@ -54,31 +54,23 @@ function addWheels(){
         if(brandWheel[i].value == ""){
             brandWheel[i].classList.add("is-invalid");
             document.getElementById("errorBrand" + (i +1))!.textContent= "Campo obligatorio";
-            validBrand = false;
             contador++;
         }
         else{
             brandWheel[i].classList.remove("is-invalid");
-            validBrand = true;
-
         }
-    }
-    for (let i=0; i < diameterWheel.length; i++){
         if(diameterWheel[i].value == "" ) {
             diameterWheel[i].classList.add("is-invalid");
-            validDiameter = false;
             contador++;
             document.getElementById("errorDiameter" + (i +1))!.textContent= "Campo obligatorio";
         }
         else{
             if(Number(diameterWheel[i].value) >= 0.4 && Number(diameterWheel[i].value) <= 2){
-                validDiameter = true;
                 diameterWheel[i].classList.remove("is-invalid");
             }
             else{
                 alert(`El diámetro de la rueda ${[i +1]} no es correcto`);
                 diameterWheel[i].classList.add("is-invalid");
-                validDiameter = false;
                 contador++;
             }
         }
