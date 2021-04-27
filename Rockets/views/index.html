@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        
+        <link rel="stylesheet" href="../style.css">
+        <script src="../models/cohet.js"></script>
+        <script src="../controllers/controller.js"></script>
+
+        <title>Ex cohets typescript</title>
+        
+    </head>
+    <body class=" w-100 background">   
+            <div class="row" id="containerBorder">     
+                <div class="buttons col-1 w-25 ml-2 mt-5">
+                    <button type="button" class="m-2 p-1" onclick="createRocket1('32WESSDS', 3, [10, 30, 80])" class="resultat ">Crear 1</button>
+                    <button type="button" class="m-2 p-1" onclick="createRocket2('LDSFJA32', 6, [30, 40, 50, 50, 30, 10])" class="resultat ">Crear 2</button>
+                    <button type="button" class="m-2 p-1" onclick="acelerar1()">Acelerar 1</button>
+                    <button type="button" class="m-2 p-1" onclick="acelerar2()">Acelerar2</button>
+                    <button type="button" class="m-2 p-1" onclick="frenar1(cohet1)">Frenar 1</button>
+                    <button type="button" class="m-2 p-1" onclick="frenar2(cohet2)">Frenar 2</button>
+                    <button type="button" class="m-2 p-1" onclick="go()" class="go">Go!</button>
+                    <button type="button" class="m-2 p-1" value="Actualizar" onclick="location.reload()">Reload</button>  
+                </div>
+                <div id="cohets" class="col-7">
+                    <i class="goal col-10 w-100 ml-5 mt-0" id="goal" style="visibility: hidden;"></i>
+                    <img src="../img/cohet1off.png" alt="cohet1" class="fas"  id="cohet1" style="visibility: hidden;"></img>
+                    <img src="../img/cohet2off.png" alt="cohet2" class="fas ml-5"  id="cohet2" style="visibility: hidden;"></img>
+                </div>
+                <div class="col-3">
+                        <h3 class="col p-3 mt-4" id="rules">Crea el cohete 1</h3>
+                    <div class="output col p-4" id="output" style="visibility: hidden;">
+                        <p id="cohetInfo1" class="text"></p>
+                        <p id="potenciaInfo1" class="text"></p>
+                        <p id="potenciaInfoFast1" class="text"></p>
+                        <p id="cohetInfo2" class="text"></p>
+                        <p id="potenciaInfo2" class="text"></p>
+                        <p id="potenciaInfoFast2" class="text"></p>
+                    </div>
+                </div>
+            </div>
+        
+            <ul>
+                <li class="star-five"></li>
+                <li class="star-five"></li>
+                <li class="star-five"></li>
+                <li class="star-five"></li>
+                <li class="star-five"></li>
+                <li class="star-five"></li>
+            </ul>
+    </body>
+</html>
